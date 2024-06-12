@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Font Awsome Icons CDN Link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea class="form-text" placeholder="Enter text"></textarea>
+          <textarea
+            class="form-to"
+            placeholder="Translation"
+            readonly
+            disabled
+          ></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i class="fas fa-volume-up"></i>
+              <i class="fas fa-copy"></i>
+            </div>
+
+            <select>
+              <option value="en-US">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Sinhala">Sinhala</option>
+            </select>
+          </li>
+          <li class="exchange">
+            <i class="fas fa-exchange-alt"></i>
+          </li>
+
+          <li class="row to">
+            <select>
+              <option value="en-US">Hindi</option>
+              <option value="Hindi">Sinhala</option>
+              <option value="Sinhala">English</option>
+            </select>
+            <div class="icons">
+              <i class="fas fa-volume-up"></i>
+              <i class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button>Translate Text</button>
+    </div>
+  </body>
+</html>
