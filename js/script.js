@@ -35,7 +35,8 @@ translateBtn.addEventListener("click", () => {
   let text = fromText.value,
     translateFrom = selectTag[0].value, //getting fromSelect tag value
     translateTo = selectTag[1].value; //gettin toSelect tag value
-
+    if(!text) return;
+    toText.setAttribute("placeholder","Translating...");
   let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
 
   //fetching api response and returning it with parsing into js obj
@@ -44,6 +45,7 @@ translateBtn.addEventListener("click", () => {
     .then((res) => res.json())
     .then((data) => {
       toText.value=data.responseData.translatedText;
+      toText.setAttribute("placeholder","Translation")
     });
 });
 
